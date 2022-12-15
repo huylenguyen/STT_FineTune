@@ -130,3 +130,7 @@ dmypy.json
 
 # Repos
 checkpoints/
+model_*/
+
+# Datasets
+data_*/
