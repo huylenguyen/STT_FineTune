@@ -743,6 +743,21 @@ tests = ["Werkzeug (>=1.0.1)", "absl-py", "bert-score (>=0.3.6)", "cer (>=1.2.0)
 torch = ["torch"]
 
 [[package]]
+name = "exceptiongroup"
+version = "1.0.4"
+description = "Backport of PEP 654 (exception groups)"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "exceptiongroup-1.0.4-py3-none-any.whl", hash = "sha256:542adf9dea4055530d6e1279602fa5cb11dab2395fa650b8674eaec35fc4a828"},
+    {file = "exceptiongroup-1.0.4.tar.gz", hash = "sha256:bd14967b79cd9bdb54d97323216f8fdf533e278df937aa2a90089e7d6e06e5ec"},
+]
+
+[package.extras]
+test = ["pytest (>=6)"]
+
+[[package]]
 name = "executing"
 version = "1.2.0"
 description = "Get the currently executing AST node of a frame, and other information"
@@ -1102,6 +1117,39 @@ torch = ["torch"]
 typing = ["types-PyYAML", "types-requests", "types-simplejson", "types-toml", "types-tqdm", "types-urllib3"]
 
 [[package]]
+name = "hypothesis"
+version = "6.61.0"
+description = "A library for property-based testing"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "hypothesis-6.61.0-py3-none-any.whl", hash = "sha256:7bb22d22e35db99d5724bbf5bdc686b46add94a0f228bf1be249c47ec46b9c7f"},
+    {file = "hypothesis-6.61.0.tar.gz", hash = "sha256:fbf7da30aea839d88898f74bcc027f0f997060498a8a7605880688c8a2166215"},
+]
+
+[package.dependencies]
+attrs = ">=19.2.0"
+exceptiongroup = {version = ">=1.0.0", markers = "python_version < \"3.11\""}
+sortedcontainers = ">=2.1.0,<3.0.0"
+
+[package.extras]
+all = ["backports.zoneinfo (>=0.2.1)", "black (>=19.10b0)", "click (>=7.0)", "django (>=3.2)", "dpcontracts (>=0.4)", "importlib-metadata (>=3.6)", "lark (>=0.10.1)", "libcst (>=0.3.16)", "numpy (>=1.9.0)", "pandas (>=1.0)", "pytest (>=4.6)", "python-dateutil (>=1.4)", "pytz (>=2014.1)", "redis (>=3.0.0)", "rich (>=9.0.0)", "tzdata (>=2022.7)"]
+cli = ["black (>=19.10b0)", "click (>=7.0)", "rich (>=9.0.0)"]
+codemods = ["libcst (>=0.3.16)"]
+dateutil = ["python-dateutil (>=1.4)"]
+django = ["django (>=3.2)"]
+dpcontracts = ["dpcontracts (>=0.4)"]
+ghostwriter = ["black (>=19.10b0)"]
+lark = ["lark (>=0.10.1)"]
+numpy = ["numpy (>=1.9.0)"]
+pandas = ["pandas (>=1.0)"]
+pytest = ["pytest (>=4.6)"]
+pytz = ["pytz (>=2014.1)"]
+redis = ["redis (>=3.0.0)"]
+zoneinfo = ["backports.zoneinfo (>=0.2.1)", "tzdata (>=2022.7)"]
+
+[[package]]
 name = "idna"
 version = "3.4"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -1348,6 +1396,17 @@ python-versions = ">=3.7"
 files = [
     {file = "jupyterlab_widgets-3.0.4-py3-none-any.whl", hash = "sha256:4c9275daa6d20fc96c3aea45756ece7110850d035b0b93a6a40e918016b927da"},
     {file = "jupyterlab_widgets-3.0.4.tar.gz", hash = "sha256:9a568e022b8bb53ab23291f6ddb52f8002b789c2c5763378cbc882be1d619be8"},
+]
+
+[[package]]
+name = "kenlm"
+version = "0.1"
+description = ""
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "kenlm-0.1.tar.gz", hash = "sha256:f75b24f508e4f6edf96db29bf4386d98eab5745c75eb9c4ed882e2a70ec44782"},
 ]
 
 [[package]]
@@ -2496,6 +2555,26 @@ files = [
 ]
 
 [[package]]
+name = "pyctcdecode"
+version = "0.4.0"
+description = "CTC beam search decoder for speech recognition."
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "pyctcdecode-0.4.0-py2.py3-none-any.whl", hash = "sha256:732aea201f99c90ae4561cd3063e35f6d41a569ae6ded93ec61a7dd232ee7437"},
+    {file = "pyctcdecode-0.4.0.tar.gz", hash = "sha256:7ccf1d735adddefc64202478391d55651c63c3e82d71a2e326122090db5050bb"},
+]
+
+[package.dependencies]
+hypothesis = ">=6.14,<7"
+numpy = ">=1.15.0,<2.0.0"
+pygtrie = ">=2.1,<3.0"
+
+[package.extras]
+dev = ["bandit", "black", "codecov", "flake8", "huggingface-hub", "isort (>=5.0.0,<6)", "jupyter", "mypy", "nbconvert", "nbformat", "pydocstyle", "pylint", "pytest", "pytest-cov"]
+
+[[package]]
 name = "pydantic"
 version = "1.10.2"
 description = "Data validation and settings management using python type hints"
@@ -2574,6 +2653,18 @@ files = [
 
 [package.extras]
 plugins = ["importlib-metadata"]
+
+[[package]]
+name = "pygtrie"
+version = "2.5.0"
+description = "A pure Python trie data structure implementation."
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "pygtrie-2.5.0-py3-none-any.whl", hash = "sha256:8795cda8105493d5ae159a5bef313ff13156c5d4d72feddefacaad59f8c8ce16"},
+    {file = "pygtrie-2.5.0.tar.gz", hash = "sha256:203514ad826eb403dab1d2e2ddd034e0d1534bbe4dbe0213bb0593f66beba4e2"},
+]
 
 [[package]]
 name = "pynacl"
@@ -3303,6 +3394,18 @@ files = [
 ]
 
 [[package]]
+name = "sortedcontainers"
+version = "2.4.0"
+description = "Sorted Containers -- Sorted List, Sorted Dict, Sorted Set"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "sortedcontainers-2.4.0-py2.py3-none-any.whl", hash = "sha256:a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0"},
+    {file = "sortedcontainers-2.4.0.tar.gz", hash = "sha256:25caa5a06cc30b6b83d11423433f65d1f9d76c4c6a0c90e3379eaa43b9bfdb88"},
+]
+
+[[package]]
 name = "soundfile"
 version = "0.11.0"
 description = "An audio library based on libsndfile, CFFI and NumPy"
@@ -3951,4 +4054,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "ccd32464692c67ba3abdbcbfd91fabd4ebccbf6adfe80515eac26de5e0cc19a8"
+content-hash = "8b478fba884a3c297b95d7a1afa1cc29f8b95fadaa3e162d4f58f2b687fffb0f"

@@ -20,6 +20,8 @@ gtts = "^2.3.0"
 evaluate = "^0.4.0"
 gradio = "^3.13.0"
 altair = "^4.2.0"
+kenlm = "^0.1"
+pyctcdecode = "^0.4.0"
 
 
 [build-system]
